@@ -2,38 +2,38 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Dwight Temple
     - name: Date of Birth
-      value: 14th March 1879
+      value: 27th October 1993
     - name: Languages
-      value: English, German
+      value: English, German (learning)
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master of Science in Business Analytics
+      institution: University of Alabama in Huntsville, Huntsville, AL
+      year: 2020
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - 3.9 GPA
+        -
+    - title: Bachelors of Science in Aerospace Engineering
+      institution: Mississippi State University, Starkville, MS
+      year: 2016
+      description:
+        - 4.0 GPA
+        - Astronautics concentration
+        - title: Activities
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+            - Resident Advisor (August 2013 - May 2015)
+            - Famous Maroon Marching Band (August 2012- May 2015)
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Machine Learning Engineer
+      institution: Apple Inc.
+      year: 2020-Present
       description:
         - Description 1.
         - Description 2.
@@ -41,43 +41,25 @@
           contents:
             - Sub-description 1.
             - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+    - title: Artificial Intelligence Engineer
+      institution: ExoAnalytic Solutions
+      year: 2018-2020
       description:
         - Description 1.
         - Description 2.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+    - title: Systems Engineer
+      institution: ExoAnalytic Solutions
+      year: 2016-2018
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Resident Advisor
+      institution: Mississippi State University
+      year: 2013-2015
       description:
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - title: Team Member
+      institution: Chick-fil-a
+      year: 2011-2013
 
 - title: Academic Interests
   type: nested_list
@@ -91,7 +73,10 @@
         - Description 1.
         - Description 2.
 
-- title: Other Interests
+- title: Life outside of work!
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u>
+    - Running, lifting, biking
+    - Building, improving, reconstructing
+    - Photography, guitar, saxophone
