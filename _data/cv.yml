@@ -3,8 +3,6 @@
   contents:
     - name: Full Name
       value: Dwight Temple
-    - name: Date of Birth
-      value: 27th October 1993
     - name: Languages
       value: English, German (learning)
 
@@ -36,6 +34,8 @@
           contents:
             - Resident Advisor (August 2013 - May 2015)
             - Famous Maroon Marching Band (August 2012- May 2015)
+            - Sigma Gamma Tau
+            - AIAA
 
 - title: Experience
   type: time_table
@@ -44,32 +44,67 @@
       institution: Apple Inc.
       year: 2022-Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - title: Results
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
+            - Preventing $(very high number) in annual fraud losses
+            - Maintained, developed, and innovated an analytic fraud model
+            - Uses Python, XGBoost, SQL, Pandas, Numpy, Seaborn, and Clojure pipeline
+        - title: Operational Excellence
+          contents:
+            - Improved model development life-cycle with automation and standardization
+            - Reduced model refresh cycle from two-weeks to one-day
+        - title: Collaboration
+          contents:
+            - Led team-wide innovation effort for graph neural network approaches and feature engineering
     - title: Machine Learning Engineer
       institution: Apple Inc.
       year: 2020-2022
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - title: Results
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
+            - Reduced error detection delay from ~4 hours to under 5 minutes for critical decisioning
+        - title: Collaboration
+          contents:
+            - Worked cross-functionally to incorporate and convey new business findinds and recommend courses of actions
     - title: Artificial Intelligence Engineer
       institution: ExoAnalytic Solutions
       year: 2018-2020
       description:
-        - Description 1.
-        - Description 2.
+        - title: Multi-target tracking for Space Situational Awareness
+          contents:
+           - Detection, characterization, indication, and warnings
+           - COTS hardware --> data screening --> YOLO Network --> Kalman filter --> multi-target tracking
+        - title: Hypersonic tracking using RADAR and deep-learning
+          contents:
+            - Formulated novel Kalman filter parameterized by RNN with Attention lookback mechanism
+            - Customer raved about ease of use, results, and responsiveness
+        - title: Multi-phenomenology Sensor Fusion Probabalistic DNN
+          contents:
+            - Network was uniquely constructed to handle asynchronous, multiple source, and varied feature input
+            - Utilized Bayesian inference for uncertainty esimation in result (epistemic and aleotoric)
+            - Orchestrated Python and Tensorflow to MATLAB using a JAVA interface for delivery to government system
+        - title: DSLR imaging system for Low Earth Orbit Tracking
+          contents:
+            - Designed COTS pipeline for imaging the night sky and tracking LEO satellites
+            - Image processing
+            - Initial orbit determination
+        - title: Business Development
+          contents:
+            - Led proposal efforts for multiple hypothesis tracking using DNNs
+            - Contributed on numerous proposals in support of Air Force, Army, and DARPA agencies
 
     - title: Systems Engineer
       institution: ExoAnalytic Solutions
       year: 2016-2018
+      description:
+        - title: Modeling and simulation
+          contents:
+            - Developed complex simulations using EO/IR emulator for various missile defense platforms
+            - Evaluated space-based platform concepts
+        - title: Environment characterization
+          contents:
+            - Engineered algorithm to utilize multiple EO/IR and RF sensors to detect a degraded environment
+            - Estimate 3 dimensional cloud extent by fusing phenomenologies
 
     - title: On-the-come-up Experience
       year: 2011-2015
@@ -77,22 +112,29 @@
         - Resident Advisor; Mississippi State University; 2013-2015
         - Team Member; Chick-fil-a; 2011-2013
 
+- title: Comfortable Tools
+  type: list
+  contents:
+    - <b>Data:</b> Catboost, XGBoost, Tensorflow, PyTorch, Numpy, Pandas, PySpark
+    - <b>Language:</b> Python, SQL, MATLAB
+    - <b>Visualization:</b> Seaborn, matplotlib
+
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Applied Machine Learning
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - GAN, RNN, Transformer, CNN, Segmentation
+        - Bayesian learning methods
+        - Graph Neural Networks
+    - title: Target Tracking
       items:
-        - Description 1.
-        - Description 2.
+        - Kalman filtering, unscented Kalman, particle filtering
+        - State-space modeling, missile defense, feature-aided track correlation
 
 - title: Life outside of work!
   type: list
   contents:
-    - <u>Hobbies:</u>
-    - Running, lifting, biking
-    - Building, improving, reconstructing
-    - Photography, guitar, saxophone
+    - <b>Health:</b> Running, cycling, powerlifting
+    - <b>Hands:</b> Building, Home Improvement, Tinkering, Car
+    - <b>Creative:</b> Photography, guitar
