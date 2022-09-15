@@ -5,7 +5,7 @@ permalink: /photos/
 nav: true
 nav_order: 2
 date: 2022-09-12 21:01:00
-description: this is what included images could look like
+description: a collection of places I've seen and want to share
 ---
 
 
