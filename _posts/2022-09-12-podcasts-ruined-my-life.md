@@ -3,7 +3,7 @@ layout: post
 title:  Podcasts Ruined my Life
 date:   2022-09-12 18:40:16
 description: Something about my mind
-categories: sample-posts
+categories: ramblings
 ---
 <h1>Listening to Lex Fridman, Sam Parr, Andrew Huberman, and Chase Chewning slowly ruined my life. Here’s how I fixed it.</h1>
 

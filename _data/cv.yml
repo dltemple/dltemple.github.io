@@ -16,13 +16,22 @@
       year: 2020
       description:
         - 3.9 GPA
-        -
+        - Data analytics using Python and R
+        - Experimental design, modeling & simulation
+        - Statistics and Machine Learning
+        - Business partnerships and fundamentals
     - title: Bachelors of Science in Aerospace Engineering
       institution: Mississippi State University, Starkville, MS
       year: 2016
       description:
         - 4.0 GPA
-        - Astronautics concentration
+        - title: Astronautics
+          contents:
+            - Aerodynamics
+            - Structures and composites
+            - Guidance and control systems
+            - Orbital Mechanics
+            - Spacecraft Mission and Design
         - title: Activities
           contents:
             - Resident Advisor (August 2013 - May 2015)
@@ -31,9 +40,19 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Senior Machine Learning Engineer
+      institution: Apple Inc.
+      year: 2022-Present
+      description:
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
     - title: Machine Learning Engineer
       institution: Apple Inc.
-      year: 2020-Present
+      year: 2020-2022
       description:
         - Description 1.
         - Description 2.
@@ -52,14 +71,11 @@
       institution: ExoAnalytic Solutions
       year: 2016-2018
 
-    - title: Resident Advisor
-      institution: Mississippi State University
-      year: 2013-2015
+    - title: On-the-come-up Experience
+      year: 2011-2015
       description:
-
-    - title: Team Member
-      institution: Chick-fil-a
-      year: 2011-2013
+        - Resident Advisor; Mississippi State University; 2013-2015
+        - Team Member; Chick-fil-a; 2011-2013
 
 - title: Academic Interests
   type: nested_list
