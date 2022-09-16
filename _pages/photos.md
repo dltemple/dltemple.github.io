@@ -1,11 +1,6 @@
 ---
-layout: page
-title:  photos
-permalink: /photos/
-nav: true
-nav_order: 2
-date: 2022-09-12 21:01:00
-description: a collection of places I've seen and want to share
+layout: page title:  photos permalink: /photos/ nav: true nav_order: 2 date: 2022-09-12 21:01:00 description: a
+collection of places I've seen and want to share
 ---
 
 
@@ -16,7 +11,7 @@ description: a collection of places I've seen and want to share
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/troll_rocks.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-<div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/volcano1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
@@ -28,7 +23,7 @@ description: a collection of places I've seen and want to share
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/tectonic_plates.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-<div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/emma_cliff.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
