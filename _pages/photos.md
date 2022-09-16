@@ -50,6 +50,9 @@ description: a collection of places I've seen and want to share
         {% include figure.html path="assets/img/astro_moon.png" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/new_zealand_pano.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/astro1.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
