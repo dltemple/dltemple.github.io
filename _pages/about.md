@@ -6,7 +6,7 @@ subtitle: Scrapy Engineer that does (Deep learning + Fraud Detection + Physics)
 
 profile:
   align: right
-  image: headshot_cropped.JPG
+  image: headshot_cropped.png
   image_circular: false # crops the image to make it circular
   address: >
     <p>Raleigh, NC 27607</p>
