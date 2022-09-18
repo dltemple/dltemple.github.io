@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Scrapy Engineer that does (Deep learning + Fraud Detection + Physics)
+subtitle: Scrappy Engineer that does (Deep learning + Fraud Detection + Physics)
 
 profile:
   align: right
