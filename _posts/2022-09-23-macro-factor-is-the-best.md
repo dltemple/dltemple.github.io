@@ -23,7 +23,7 @@ I’ve always been increasingly skeptical of pay-for-service fitness apps becaus
 Enter [Stronger By Science](https://www.strongerbyscience.com/)
 -
 
-Greg Nuckols and Eric Trexler (two guest co-hosts on a globally distributed, audience captivating, strength science [podcast](https://www.strongerbyscience.com/podcast/)) were also similarly frustrated with the fitness app landscape. 
+[Greg Nuckols](http://gregnuckols.com/) and [Eric Trexler](https://www.strongerbyscience.com/coaching/eric-trexler/) (two guest co-hosts on a globally distributed, audience captivating, strength science [podcast](https://www.strongerbyscience.com/podcast/)) were also similarly frustrated with the fitness app landscape. 
 
 Instead of abstaining from participating in the ecosystem, they decided to craft a potent team and deliver to market the most superior diet-assistance application.
 
