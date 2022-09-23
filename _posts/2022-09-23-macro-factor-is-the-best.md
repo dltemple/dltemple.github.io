@@ -21,7 +21,7 @@ I’ve always been increasingly skeptical of pay-for-service fitness apps becaus
 
 ---
 Enter [Stronger By Science](https://www.strongerbyscience.com/)
----
+-
 
 Greg Nuckols and Eric Trexler (two guest co-hosts on a globally distributed, audience captivating, strength science [podcast](https://www.strongerbyscience.com/podcast/)) were also similarly frustrated with the fitness app landscape. 
 
@@ -45,7 +45,7 @@ To resolve these many variances, MacroFactor **_appears_** to use some exponenti
 
 ---
 For those who are interested... here's the formulas and initial value parameters.
----
+-
 
 
 \begin{eqnarray}
@@ -60,7 +60,19 @@ b_t & = & \gamma(S_t - S_{t-1}) + (1 - \gamma) b_{t-1} & & 0 \le \gamma \le 1
 b_1 & = & \frac{1}{3} \left[ (y_2 - y_1) + (y_3 - y_2) + (y_4 - y_3) \right] \\
 \end{eqnarray}
 
+$$\alpha$$ and $$ \gamma $$ are tunable parameters used in determining how much historical information 
+and how much current informatino to keep and incorporate, respectively.
+
+$$\alpha$$ dictates how much of the current observation to add to the projected values
+$$\gamma$$ is a term used to define how much of the historically trend to incorporate.
+
+In general... The larger $$\alpha$$, the more emphasis is placed on new updates. the larger $$\gamma$$, the "heavier" the historical trend is considered.
+
+Using Equation (3), one can kick-start the smoothing process. this requires (4) initial observations. In this case, the observations are weight.
+
+
 It’s beautiful. It’s dynamic. It tells the truth.
+-
 
 If the user is consistent (and honest) with energy consumption and weighing daily under identical circumstances, it appears to be the best true estimate of expenditure I’ve ever observed.
 
@@ -81,7 +93,7 @@ This is the beauty in using some exponential smoothing method. There is a time-w
 
 ---
 What does all this mean and why does it matter?
----
+-
 
 Mental health; it’s all about mental health
 
