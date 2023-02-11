@@ -7,7 +7,7 @@ categories: ramblings
 ---
 
 In many fields of study, state-space-systems are a powerful and tool used to better predict and understand dynamical systems.
-Kalman, after whom the Kalman Fitler is named, derived a steady-state solution for a Gaussian system.
+Kalman, after whom the Kalman Filter is named, derived a steady-state solution for a Gaussian system.
 
 This technique can additionally be applied to dynamic systems with:
 - various observation types (RADAR, LIDAR, optical, etc.)

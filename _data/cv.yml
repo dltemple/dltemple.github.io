@@ -56,6 +56,7 @@
         - title: Collaboration
           contents:
             - Led team-wide innovation effort for graph neural network approaches and feature engineering
+            - Mentored summer intern and provided project for novel label ensemble methods
     - title: Machine Learning Engineer
       institution: Apple Inc.
       year: 2020-2022
@@ -116,7 +117,7 @@
   type: list
   contents:
     - <b>Data:</b> Catboost, XGBoost, Tensorflow, PyTorch, Numpy, Pandas, PySpark
-    - <b>Language:</b> Python, SQL, MATLAB
+    - <b>Language:</b> Python, SQL, Clojure, MATLAB
     - <b>Visualization:</b> Seaborn, matplotlib
 
 - title: Academic Interests
@@ -129,7 +130,7 @@
         - Graph Neural Networks
     - title: Target Tracking
       items:
-        - Kalman filtering, unscented Kalman, particle filtering
+        - Kalman filtering, Unscented Kalman, Particle Filtering
         - State-space modeling, missile defense, feature-aided track correlation
 
 - title: Life outside of work!
@@ -137,4 +138,4 @@
   contents:
     - <b>Health:</b> Running, cycling, powerlifting
     - <b>Hands:</b> Building, Home Improvement, Tinkering, Car
-    - <b>Creative:</b> Photography, guitar
+    - <b>Creative:</b> Photography, Guitar, German
