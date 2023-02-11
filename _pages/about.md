@@ -8,8 +8,8 @@ profile:
   align: right
   image: headshot_cropped.png
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>Raleigh, NC 27608</p>
+  address: <p>Raleigh, NC 27608</p>
+
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
