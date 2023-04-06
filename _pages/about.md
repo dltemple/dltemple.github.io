@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Scrappy Engineer that does (Deep learning + Fraud Detection + Physics)
+subtitle: Using Eclectic Experience to Discover Novel Solutions
 
 profile:
   align: right
@@ -19,22 +19,21 @@ social: true  # includes social icons at the bottom of the page
 ---
 ## _I’d love to say there’s something uniquely special about me in my about me, but I’m not a liar._
 
-#### **Some personal tenants:**
+### **Personal Tenets:**
+- Leveraging diverse experiences to craft innovative solutions
+- Continuously seeking role models and learning from them
+- Challenging complacency in all aspects of life
 
--	Using eclectic experience to discover novel solutions
--	Striving to identify the role model in the room and emulate them
--	Not being complacent in anything I do
-
-#### **Things that get me excited:**
--	Deep-learning and optimization
--	Physics, simulations, and modeling
--	Abstracting small ideas to a large-scale and seeing the weak points
--	Creative outlets: astrophotography, media creation, furniture building
--	Exercise: running, cycling, powerlifting
--	DIY home improvement
--	Ergogenics and human performance optimization
--	Sometimes playing guitar and needing to play saxophone more
--	Anything outdoors that requires some grittiness
+### **Passions & Interests:**
+- Deep learning and optimization
+- Physics, simulations, and modeling
+- Scaling ideas and identifying weak points
+- Creative pursuits: astrophotography, media creation, furniture building
+- Fitness: running, cycling, powerlifting
+- DIY home improvement
+- Ergogenics and human performance optimization
+- Musical exploration: playing guitar and aspiring to play saxophone more
+- Outdoor adventures that demand resilience and determination
 
 
 If you caught me on any one day, I’d most likely be reading [r/FatFire](https://www.reddit.com/r/fatFIRE/), programming machine learning algorithms, running or lifting weights, walking my dog, listening to an off-beat podcast, or finding something niche over which to obsess.
