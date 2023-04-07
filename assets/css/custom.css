@@ -1,0 +1,34 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.activation-functions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.activation-function {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.activation-function h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.interactive-plot {
+  width: 100%;
+  height: 300px;
+}
