@@ -1,13 +1,13 @@
 /* style.css */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   line-height: 1.6;
 }
 
 .container {
   width: 80%;
   margin: auto;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .activation-functions {

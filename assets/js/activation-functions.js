@@ -23,24 +23,29 @@ function createInteractivePlot(plotId, equation, derivative) {
   });
 
   const activationTrace = {
-    x: xValues,
-    y: yValues,
-    mode: 'lines',
-    name: 'Activation',
-  };
+  x: xValues,
+  y: yValues,
+  mode: 'lines',
+  name: 'Activation',
+  line: { color: '#007AFF', width: 2 },
+    };
 
-  const derivativeTrace = {
-    x: xValues,
-    y: yDerivativeValues,
-    mode: 'lines',
-    name: 'Derivative',
-  };
+    const derivativeTrace = {
+      x: xValues,
+      y: yDerivativeValues,
+      mode: 'lines',
+      name: 'Derivative',
+      line: { color: '#FF3B30', width: 2 },
+    };
 
-  const layout = {
-    margin: { t: 0, r: 0, l: 30, b: 30 },
-    xaxis: { title: 'x' },
-    yaxis: { title: 'f(x)' },
-  };
+    const layout = {
+      margin: { t: 0, r: 0, l: 0, b: 30 },
+      xaxis: { title: 'x', range: [-1, 1], titlefont: { color: '#ffffff' }, tickfont: { color: '#ffffff' }, linecolor: '#ffffff', gridcolor: 'rgba(34, 34, 34, 0.2)' },
+      yaxis: { title: 'f(x)', range: [-1.5, 1.5], fixedrange: true, titlefont: { color: '#ffffff' }, tickfont: { color: '#ffffff' }, linecolor: '#ffffff', gridcolor: 'rgba(34, 34, 34, 0.2)' },
+      legend: { x: 0.5, y: 1.1, orientation: 'h', font: { color: '#ffffff' } },
+      plot_bgcolor: '#222222', /* This sets the background color of the chart area */
+      paper_bgcolor: '#222222', /* This sets the background color of the entire plot */
+};
 
   Plotly.newPlot(plotId, [activationTrace, derivativeTrace], layout);
 }

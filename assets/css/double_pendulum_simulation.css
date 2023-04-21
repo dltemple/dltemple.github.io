@@ -1,0 +1,84 @@
+body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+
+      #simulation-and-plots {
+         display: flex;
+         justify-content: space-around;
+         align-items: flex-start;
+         width: 100%;
+         padding: 20px;
+         box-sizing: border-box;
+      }
+
+      #double-pendulum-container,
+      #simulation-container {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 0 20px;
+         box-sizing: border-box;
+      }
+
+      #double-pendulum-container {
+         border-right: 1px solid #ccc;
+      }
+
+      .buttons {
+         margin-top: 10px;
+      }
+
+      button {
+         font-size: 16px;
+         padding: 8px 16px;
+         margin-right: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         background-color: #f9f9f9;
+         cursor: pointer;
+      }
+
+      button:hover {
+         background-color: #f0f0f0;
+      }
+
+      .params-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 10px;
+         margin-top: 10px;
+      }
+
+      .param-group {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      label {
+         font-size: 14px;
+      }
+
+      input {
+         font-size: 14px;
+         padding: 4px 8px;
+         margin-top: 4px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+      }
+      .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110vh; /* Set the height to 100% of the viewport */
+      }
+
+      .embedded-window {
+        width: 100%; /* Adjust the width as needed */
+        height: 100%; /* Adjust the height as needed */
+        border: none;
+      }
