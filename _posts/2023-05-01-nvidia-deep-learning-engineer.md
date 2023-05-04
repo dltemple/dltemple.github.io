@@ -119,24 +119,34 @@ common loss functions and their pros, cons, and usage scenarios:
     - *Cons*: Can be sensitive to outliers
     - *When to use*: Regression tasks
     - *When to avoid*: Classification tasks
+    - *Function*:
+      $$\begin{aligned} \text{MSE}(y, \hat{y}) = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2 \end{aligned}$$
 
 2. **Cross-Entropy**:
     - *Pros*: Effective for multi-class classification, focuses on probabilities
     - *Cons*: Not suitable for regression tasks
     - *When to use*: Classification tasks, particularly multi-class classification
     - *When to avoid*: Regression tasks
+    - *Function*:
+      $$\begin{aligned} \text{Cross-Entropy}(y, \hat{y}) = -\sum_{i=1}^{n}y_i \log(\hat{y}_i) \end{aligned}$$
 
 3. **Hinge loss**:
     - *Pros*: Encourages large margins between classes, suitable for Support Vector Machines (SVMs)
     - *Cons*: Not suitable for non-binary classification or regression tasks
     - *When to use*: Binary classification with SVMs
     - *When to avoid*: Multi-class classification, regression tasks
+    - *Function*:
+      $$\begin{aligned} \text{Hinge Loss}(y, \hat{y}) = \sum_{i=1}^{n}\max(0, 1 - y_i\hat{y}_i) \end{aligned}$$
 
 4. **Huber loss**:
     - *Pros*: Combines benefits of MSE and Mean Absolute Error (MAE), robust to outliers
     - *Cons*: Requires tuning of hyperparameter delta
     - *When to use*: Regression tasks with outliers
     - *When to avoid*: Classification tasks
+    - *Function*:
+      $$\begin{aligned} \text{Huber Loss}(y, \hat{y}, \delta) = \begin{cases} \frac{1}{2}(y - \hat{y})^2 & \text{for }
+      |y - \hat{y}| \le \delta \\ \delta (|y - \hat{y}| - \frac{1}{2}\delta) & \text{otherwise} \end{cases}
+      \end{aligned}$$
 
 And now, let's explore some more exotic loss function types:
 
@@ -145,36 +155,51 @@ And now, let's explore some more exotic loss function types:
     - *Cons*: Computationally more expensive than MSE
     - *When to use*: Regression tasks with noisy data
     - *When to avoid*: Classification tasks
+    - *Function*:
+      $$\begin{aligned} \text{Log-Cosh Loss}(y, \hat{y}) = \sum_{i=1}^{n}\log(\cosh(\hat{y}_i - y_i)) \end{aligned}$$
 
 6. **Kullback-Leibler Divergence (KLD)**:
     - *Pros*: Measures the difference between two probability distributions, suitable for unsupervised learning
     - *Cons*: Computationally expensive
     - *When to use*: Unsupervised learning, comparing distributions
     - *When to avoid*: Simple regression or classification tasks
+    - *Function*:
+      $$\begin{aligned} \text{KLD}(P, Q) = \sum_{i}P(i)\log\left(\frac{P(i)}{Q(i)}\right) \end{aligned}$$
+
 
 7. **Poisson loss**:
     - *Pros*: Suitable for count-based regression tasks
     - *Cons*: Assumes data follows a Poisson distribution, not suitable for classification tasks
     - *When to use*: Count-based regression tasks (e.g., predicting the number of events)
     - *When to avoid*: Classification tasks, non-count-based regression tasks
+    - *Function*:
+      $$\begin{aligned} \text{Poisson Loss}(y, \hat{y}) = \sum_{i=1}^{n}(\hat{y}_i - y_i\log(\hat{y}_i)) \end{aligned}$$
 
 8. **Dice loss**:
     - *Pros*: Effective for segmentation tasks, balances precision and recall
     - *Cons*: Not suitable for regression tasks, can be sensitive to class imbalance
     - *When to use*: Image segmentation tasks, especially in medical imaging
     - *When to avoid*: Regression tasks, simple classification tasks
+    - *Function*:
+      $$\begin{aligned} \text{Dice Loss}(y, \hat{y}) = 1 - \frac{2\sum_{i=1}^{n}y_i\hat{y}_i}{\sum_{i=1}^{n}y_i^2 +
+      \sum_{i=1}^{n}\hat{y}_i^2} \end{aligned}$$
 
 9. **Cosine similarity loss**:
     - *Pros*: Measures the angle between two vectors, invariant to scale
     - *Cons*: Not suitable for traditional classification or regression tasks
     - *When to use*: Comparing embeddings or high-dimensional vectors (e.g., in recommendation systems)
     - *When to avoid*: Simple regression or classification tasks
+    - *Function*:
+      $$\begin{aligned} \text{Cosine Similarity Loss}(A, B) = 1 - \frac{\sum_{i=1}^{n}A_iB_i}{\sqrt{\sum_
+      {i=1}^{n}A_i^2}\sqrt{\sum_{i=1}^{n}B_i^2}} \end{aligned}$$
 
 10. **Triplet loss**:
-- *Pros*: Effective for learning embeddings in a relative space, useful for tasks such as face recognition
-- *Cons*: Requires careful selection of triplets, not suitable for traditional classification or regression tasks
-- *When to use*: Learning embeddings for tasks like face recognition or image retrieval
-- *When to avoid*: Simple regression or classification tasks
+    - *Pros*: Effective for learning embeddings in a relative space, useful for tasks such as face recognition
+    - *Cons*: Requires careful selection of triplets, not suitable for traditional classification or regression tasks
+    - *When to use*: Learning embeddings for tasks like face recognition or image retrieval
+    - *When to avoid*: Simple regression or classification tasks
+    - *Function*:
+      $$\begin{aligned} \text{Triplet Loss}(a, p, n) = \max(0, ||a - p||_2^2 - ||a - n||_2^2 + \alpha) \end{aligned}$$
 
 By understanding the characteristics of each loss function, you'll be well-equipped to select the most appropriate one
 for your deep learning tasks at NVIDIA. Good luck, and don't forget to enjoy the journey!
