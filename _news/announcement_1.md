@@ -2,6 +2,7 @@
 layout: post
 date: 2022-09-25 11:00:00-0400
 inline: true
+related_posts: false
 ---
 
 I'm building a new post documenting a 12-state kalman filter
