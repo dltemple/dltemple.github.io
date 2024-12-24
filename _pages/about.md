@@ -6,9 +6,9 @@ subtitle: Using Eclectic Experience to Discover Novel Solutions
 
 profile:
   align: right
-  image: headshot_cropped.png
+  image: dwight_headshot_2024.jpeg
   image_circular: false # crops the image to make it circular
-  address: <p>Raleigh, NC 27608</p>
+  address: <p>Austin, TX</p>
 
 
 news: true  # includes a list of news items

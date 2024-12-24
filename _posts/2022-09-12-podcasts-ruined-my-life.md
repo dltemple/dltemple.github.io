@@ -13,7 +13,7 @@ To stumble upon these guys is a Godsend. The words they and their guests breathe
 
 **Lex:** melding of scientific rigor, compassion, empathy, and child-like curiosity and hope.
 
-**Sam:** happy-go-lucky, yet driven and passionate entrepreneur seeking opportunity like a prowling jungle-cat
+**Sam:** happy-go-lucky, yet driven and passionate entrepreneur seeking opportunity
 
 **Andrew:** insight into the mind of a practitioner, proclaimer, and professor of all things cutting edge and how to most potently apply to your life with a little bit of punk rocker and tumultuous underdog upbringing.
 
