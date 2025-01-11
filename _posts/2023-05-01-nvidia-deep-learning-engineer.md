@@ -2,7 +2,7 @@
 layout: post
 title: "A Comprehensive Study Guide for Deep Learning Engineer Interviews at NVIDIA"
 date: 2023-05-01
-categories: [ Deep Learning, Interview Preparation ]
+categories: [Deep Learning, Interview Preparation]
 ---
 
 # A Comprehensive Study Guide for Deep Learning Engineer Interviews at NVIDIA
@@ -69,40 +69,46 @@ Let's _delve deeper_ into the **pros and cons** of these beguiling activation fu
 neural network party:
 
 - **Sigmoid**:
-    * _Pros_: Smooth and differentiable, providing clear probabilities for binary classification problems.
-    * _Cons_: Prone to vanishing gradient problem; not zero-centered; computationally expensive.
-    * _Best used_: When the output layer requires probabilities for binary classification.
+
+  - _Pros_: Smooth and differentiable, providing clear probabilities for binary classification problems.
+  - _Cons_: Prone to vanishing gradient problem; not zero-centered; computationally expensive.
+  - _Best used_: When the output layer requires probabilities for binary classification.
 
 - **Hyperbolic tangent (tanh)**:
-    * _Pros_: Zero-centered and smoother than Sigmoid; suitable for a wider range of input values.
-    * _Cons_: Still susceptible to the vanishing gradient problem; computationally expensive.
-    * _Best used_: When the output layer requires values between -1 and 1; in hidden layers for some cases.
+
+  - _Pros_: Zero-centered and smoother than Sigmoid; suitable for a wider range of input values.
+  - _Cons_: Still susceptible to the vanishing gradient problem; computationally expensive.
+  - _Best used_: When the output layer requires values between -1 and 1; in hidden layers for some cases.
 
 - **Rectified Linear Unit (ReLU)**:
-    * _Pros_: Computationally efficient; helps mitigate vanishing gradient problem; encourages sparse activation.
-    * _Cons_: Inactive for negative inputs, causing the "dying ReLU" problem; not zero-centered.
-    * _Best used_: In hidden layers of deep networks due to its computational efficiency.
+
+  - _Pros_: Computationally efficient; helps mitigate vanishing gradient problem; encourages sparse activation.
+  - _Cons_: Inactive for negative inputs, causing the "dying ReLU" problem; not zero-centered.
+  - _Best used_: In hidden layers of deep networks due to its computational efficiency.
 
 - **Leaky ReLU**:
-    * _Pros_: Addresses the "dying ReLU" issue by allowing small negative values; computationally efficient.
-    * _Cons_: May cause instability in some cases; not zero-centered.
-    * _Best used_: In hidden layers where the "dying ReLU" problem is a concern.
+
+  - _Pros_: Addresses the "dying ReLU" issue by allowing small negative values; computationally efficient.
+  - _Cons_: May cause instability in some cases; not zero-centered.
+  - _Best used_: In hidden layers where the "dying ReLU" problem is a concern.
 
 - **Softmax**:
-    * _Pros_: Provides probabilities for multi-class classification problems; smooth and differentiable.
-    * _Cons_: Computationally expensive; not suitable for hidden layers.
-    * _Best used_: In the output layer for multi-class classification problems.
+
+  - _Pros_: Provides probabilities for multi-class classification problems; smooth and differentiable.
+  - _Cons_: Computationally expensive; not suitable for hidden layers.
+  - _Best used_: In the output layer for multi-class classification problems.
 
 - **Exponential Linear Unit (ELU)**:
-    * _Pros_: Aims to mitigate vanishing gradient problem; encourages smooth and nonzero output for negative inputs.
-    * _Cons_: Computationally expensive due to the exponential function.
-    * _Best used_: In hidden layers where vanishing gradient is a concern and computational resources are sufficient.
+
+  - _Pros_: Aims to mitigate vanishing gradient problem; encourages smooth and nonzero output for negative inputs.
+  - _Cons_: Computationally expensive due to the exponential function.
+  - _Best used_: In hidden layers where vanishing gradient is a concern and computational resources are sufficient.
 
 - **Swish**:
-    * _Pros_: Self-gated mechanism allows adaptability; smooth and differentiable; potential to outperform ReLU.
-    * _Cons_: Computationally expensive due to the additional multiplication operation.
-    * _Best used_: In hidden layers where adaptability and potential performance improvement are desired, and
-      computational resources are sufficient.
+  - _Pros_: Self-gated mechanism allows adaptability; smooth and differentiable; potential to outperform ReLU.
+  - _Cons_: Computationally expensive due to the additional multiplication operation.
+  - _Best used_: In hidden layers where adaptability and potential performance improvement are desired, and
+    computational resources are sufficient.
 
 Let these enchanting activation functions _guide you_ through the intricate world of deep learning, and _choose wisely_
 according to the specific needs of your dashing neural network designs. Embrace the _allure_ of their strengths and
@@ -115,90 +121,103 @@ learning engineer_, you'll need to choose the appropriate loss function for the 
 common loss functions and their pros, cons, and usage scenarios:
 
 1. **Mean Squared Error (MSE)**:
-    - *Pros*: Simple to compute and differentiable
-    - *Cons*: Can be sensitive to outliers
-    - *When to use*: Regression tasks
-    - *When to avoid*: Classification tasks
-    - *Function*:
-      $$\begin{aligned} \text{MSE}(y, \hat{y}) = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2 \end{aligned}$$
+
+   - _Pros_: Simple to compute and differentiable
+   - _Cons_: Can be sensitive to outliers
+   - _When to use_: Regression tasks
+   - _When to avoid_: Classification tasks
+   - _Function_:
+     $$\begin{aligned} \text{MSE}(y, \hat{y}) = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2 \end{aligned}$$
 
 2. **Cross-Entropy**:
-    - *Pros*: Effective for multi-class classification, focuses on probabilities
-    - *Cons*: Not suitable for regression tasks
-    - *When to use*: Classification tasks, particularly multi-class classification
-    - *When to avoid*: Regression tasks
-    - *Function*:
-      $$\begin{aligned} \text{Cross-Entropy}(y, \hat{y}) = -\sum_{i=1}^{n}y_i \log(\hat{y}_i) \end{aligned}$$
+
+   - _Pros_: Effective for multi-class classification, focuses on probabilities
+   - _Cons_: Not suitable for regression tasks
+   - _When to use_: Classification tasks, particularly multi-class classification
+   - _When to avoid_: Regression tasks
+   - _Function_:
+     $$\begin{aligned} \text{Cross-Entropy}(y, \hat{y}) = -\sum_{i=1}^{n}y_i \log(\hat{y}_i) \end{aligned}$$
 
 3. **Hinge loss**:
-    - *Pros*: Encourages large margins between classes, suitable for Support Vector Machines (SVMs)
-    - *Cons*: Not suitable for non-binary classification or regression tasks
-    - *When to use*: Binary classification with SVMs
-    - *When to avoid*: Multi-class classification, regression tasks
-    - *Function*:
-      $$\begin{aligned} \text{Hinge Loss}(y, \hat{y}) = \sum_{i=1}^{n}\max(0, 1 - y_i\hat{y}_i) \end{aligned}$$
+
+   - _Pros_: Encourages large margins between classes, suitable for Support Vector Machines (SVMs)
+   - _Cons_: Not suitable for non-binary classification or regression tasks
+   - _When to use_: Binary classification with SVMs
+   - _When to avoid_: Multi-class classification, regression tasks
+   - _Function_:
+     $$\begin{aligned} \text{Hinge Loss}(y, \hat{y}) = \sum_{i=1}^{n}\max(0, 1 - y_i\hat{y}_i) \end{aligned}$$
 
 4. **Huber loss**:
-    - *Pros*: Combines benefits of MSE and Mean Absolute Error (MAE), robust to outliers
-    - *Cons*: Requires tuning of hyperparameter delta
-    - *When to use*: Regression tasks with outliers
-    - *When to avoid*: Classification tasks
-    - *Function*:
-      $$\begin{aligned} \text{Huber Loss}(y, \hat{y}, \delta) = \begin{cases} \frac{1}{2}(y - \hat{y})^2 & \text{for }
-      |y - \hat{y}| \le \delta \\ \delta (|y - \hat{y}| - \frac{1}{2}\delta) & \text{otherwise} \end{cases}
-      \end{aligned}$$
+   - _Pros_: Combines benefits of MSE and Mean Absolute Error (MAE), robust to outliers
+   - _Cons_: Requires tuning of hyperparameter delta
+   - _When to use_: Regression tasks with outliers
+   - _When to avoid_: Classification tasks
+   - _Function_:
+     $$
+     \begin{aligned} \text{Huber Loss}(y, \hat{y}, \delta) = \begin{cases} \frac{1}{2}(y - \hat{y})^2 & \text{for }
+     |y - \hat{y}| \le \delta \\ \delta (|y - \hat{y}| - \frac{1}{2}\delta) & \text{otherwise} \end{cases}
+     \end{aligned}
+     $$
 
 And now, let's explore some more exotic loss function types:
 
 5. **Log-Cosh loss**:
-    - *Pros*: Smoother than MSE, less sensitive to outliers
-    - *Cons*: Computationally more expensive than MSE
-    - *When to use*: Regression tasks with noisy data
-    - *When to avoid*: Classification tasks
-    - *Function*:
-      $$\begin{aligned} \text{Log-Cosh Loss}(y, \hat{y}) = \sum_{i=1}^{n}\log(\cosh(\hat{y}_i - y_i)) \end{aligned}$$
+
+   - _Pros_: Smoother than MSE, less sensitive to outliers
+   - _Cons_: Computationally more expensive than MSE
+   - _When to use_: Regression tasks with noisy data
+   - _When to avoid_: Classification tasks
+   - _Function_:
+     $$\begin{aligned} \text{Log-Cosh Loss}(y, \hat{y}) = \sum_{i=1}^{n}\log(\cosh(\hat{y}_i - y_i)) \end{aligned}$$
 
 6. **Kullback-Leibler Divergence (KLD)**:
-    - *Pros*: Measures the difference between two probability distributions, suitable for unsupervised learning
-    - *Cons*: Computationally expensive
-    - *When to use*: Unsupervised learning, comparing distributions
-    - *When to avoid*: Simple regression or classification tasks
-    - *Function*:
-      $$\begin{aligned} \text{KLD}(P, Q) = \sum_{i}P(i)\log\left(\frac{P(i)}{Q(i)}\right) \end{aligned}$$
 
+   - _Pros_: Measures the difference between two probability distributions, suitable for unsupervised learning
+   - _Cons_: Computationally expensive
+   - _When to use_: Unsupervised learning, comparing distributions
+   - _When to avoid_: Simple regression or classification tasks
+   - _Function_:
+     $$\begin{aligned} \text{KLD}(P, Q) = \sum_{i}P(i)\log\left(\frac{P(i)}{Q(i)}\right) \end{aligned}$$
 
 7. **Poisson loss**:
-    - *Pros*: Suitable for count-based regression tasks
-    - *Cons*: Assumes data follows a Poisson distribution, not suitable for classification tasks
-    - *When to use*: Count-based regression tasks (e.g., predicting the number of events)
-    - *When to avoid*: Classification tasks, non-count-based regression tasks
-    - *Function*:
-      $$\begin{aligned} \text{Poisson Loss}(y, \hat{y}) = \sum_{i=1}^{n}(\hat{y}_i - y_i\log(\hat{y}_i)) \end{aligned}$$
+
+   - _Pros_: Suitable for count-based regression tasks
+   - _Cons_: Assumes data follows a Poisson distribution, not suitable for classification tasks
+   - _When to use_: Count-based regression tasks (e.g., predicting the number of events)
+   - _When to avoid_: Classification tasks, non-count-based regression tasks
+   - _Function_:
+     $$\begin{aligned} \text{Poisson Loss}(y, \hat{y}) = \sum_{i=1}^{n}(\hat{y}_i - y_i\log(\hat{y}_i)) \end{aligned}$$
 
 8. **Dice loss**:
-    - *Pros*: Effective for segmentation tasks, balances precision and recall
-    - *Cons*: Not suitable for regression tasks, can be sensitive to class imbalance
-    - *When to use*: Image segmentation tasks, especially in medical imaging
-    - *When to avoid*: Regression tasks, simple classification tasks
-    - *Function*:
-      $$\begin{aligned} \text{Dice Loss}(y, \hat{y}) = 1 - \frac{2\sum_{i=1}^{n}y_i\hat{y}_i}{\sum_{i=1}^{n}y_i^2 +
-      \sum_{i=1}^{n}\hat{y}_i^2} \end{aligned}$$
+
+   - _Pros_: Effective for segmentation tasks, balances precision and recall
+   - _Cons_: Not suitable for regression tasks, can be sensitive to class imbalance
+   - _When to use_: Image segmentation tasks, especially in medical imaging
+   - _When to avoid_: Regression tasks, simple classification tasks
+   - _Function_:
+     $$
+     \begin{aligned} \text{Dice Loss}(y, \hat{y}) = 1 - \frac{2\sum_{i=1}^{n}y_i\hat{y}_i}{\sum_{i=1}^{n}y_i^2 +
+     \sum_{i=1}^{n}\hat{y}_i^2} \end{aligned}
+     $$
 
 9. **Cosine similarity loss**:
-    - *Pros*: Measures the angle between two vectors, invariant to scale
-    - *Cons*: Not suitable for traditional classification or regression tasks
-    - *When to use*: Comparing embeddings or high-dimensional vectors (e.g., in recommendation systems)
-    - *When to avoid*: Simple regression or classification tasks
-    - *Function*:
-      $$\begin{aligned} \text{Cosine Similarity Loss}(A, B) = 1 - \frac{\sum_{i=1}^{n}A_iB_i}{\sqrt{\sum_
-      {i=1}^{n}A_i^2}\sqrt{\sum_{i=1}^{n}B_i^2}} \end{aligned}$$
+
+   - _Pros_: Measures the angle between two vectors, invariant to scale
+   - _Cons_: Not suitable for traditional classification or regression tasks
+   - _When to use_: Comparing embeddings or high-dimensional vectors (e.g., in recommendation systems)
+   - _When to avoid_: Simple regression or classification tasks
+   - _Function_:
+     $$
+     \begin{aligned} \text{Cosine Similarity Loss}(A, B) = 1 - \frac{\sum_{i=1}^{n}A_iB_i}{\sqrt{\sum_
+     {i=1}^{n}A_i^2}\sqrt{\sum_{i=1}^{n}B_i^2}} \end{aligned}
+     $$
 
 10. **Triplet loss**:
-    - *Pros*: Effective for learning embeddings in a relative space, useful for tasks such as face recognition
-    - *Cons*: Requires careful selection of triplets, not suitable for traditional classification or regression tasks
-    - *When to use*: Learning embeddings for tasks like face recognition or image retrieval
-    - *When to avoid*: Simple regression or classification tasks
-    - *Function*:
+    - _Pros_: Effective for learning embeddings in a relative space, useful for tasks such as face recognition
+    - _Cons_: Requires careful selection of triplets, not suitable for traditional classification or regression tasks
+    - _When to use_: Learning embeddings for tasks like face recognition or image retrieval
+    - _When to avoid_: Simple regression or classification tasks
+    - _Function_:
       $$\begin{aligned} \text{Triplet Loss}(a, p, n) = \max(0, ||a - p||_2^2 - ||a - n||_2^2 + \alpha) \end{aligned}$$
 
 By understanding the characteristics of each loss function, you'll be well-equipped to select the most appropriate one
@@ -246,8 +265,8 @@ weights. As an NVIDIA deep learning engineer, you'll work with various gradient 
 
 - Convolutional Neural Networks (CNNs)
 - Recurrent Neural Networks (RNNs)
-    - Long Short-Term Memory (LSTM)
-    - Gated Recurrent Units (GRU)
+  - Long Short-Term Memory (LSTM)
+  - Gated Recurrent Units (GRU)
 - Autoencoders and Variational Autoencoders
 - Generative Adversarial Networks (GANs)
 - Transformer models (e.g., BERT, GPT)
@@ -395,13 +414,13 @@ PyTorch. Key features of TensorRT include:
 **Question:** "Can you describe a time when you had to collaborate with a difficult team member?"  
 **Answer:**
 
-- *Situation:* "During a previous project, I had to work with a team member who had a different working style and often
+- _Situation:_ "During a previous project, I had to work with a team member who had a different working style and often
   disagreed with the rest of the team."
-- *Task:* "My goal was to ensure that the project was completed on time and to maintain a positive team atmosphere."
-- *Action:* "I arranged a one-on-one meeting with the team member to understand their concerns and find common ground.
+- _Task:_ "My goal was to ensure that the project was completed on time and to maintain a positive team atmosphere."
+- _Action:_ "I arranged a one-on-one meeting with the team member to understand their concerns and find common ground.
   We openly discussed our differences, and I suggested ways we could collaborate more effectively, such as dividing
   tasks based on our strengths."
-- *Result:* "As a result, we were able to work together more efficiently, and the project was completed on time. Our
+- _Result:_ "As a result, we were able to work together more efficiently, and the project was completed on time. Our
   communication improved, and the team dynamic became more positive."
 
 ### b. Communication
@@ -409,14 +428,14 @@ PyTorch. Key features of TensorRT include:
 **Question:** "How do you handle explaining complex technical concepts to non-technical stakeholders?"  
 **Answer:**
 
-- *Situation:* "In my previous role, I frequently had to present machine learning models and their results to
+- _Situation:_ "In my previous role, I frequently had to present machine learning models and their results to
   non-technical executives."
-- *Task:* "My objective was to ensure they understood the model's purpose, its benefits, and the impact on the
+- _Task:_ "My objective was to ensure they understood the model's purpose, its benefits, and the impact on the
   business."
-- *Action:* "I focused on simplifying the technical aspects by using analogies and visual aids, while emphasizing the
+- _Action:_ "I focused on simplifying the technical aspects by using analogies and visual aids, while emphasizing the
   practical implications of the model. I also prepared for questions by anticipating areas of confusion and practicing
   concise explanations."
-- *Result:* "The stakeholders were able to grasp the key concepts and make informed decisions based on my presentations.
+- _Result:_ "The stakeholders were able to grasp the key concepts and make informed decisions based on my presentations.
   This led to a higher level of trust and collaboration between the technical and non-technical teams."
 
 ### c. Problem-solving
@@ -424,13 +443,13 @@ PyTorch. Key features of TensorRT include:
 **Question:** "Describe a situation where you faced a challenging problem, and how you resolved it."  
 **Answer:**
 
-- *Situation:* "While working on a fraud detection project, I encountered an issue with the model's performance, which
+- _Situation:_ "While working on a fraud detection project, I encountered an issue with the model's performance, which
   wasn't meeting the desired accuracy threshold."
-- *Task:* "My goal was to identify the root cause of the problem and improve the model's accuracy."
-- *Action:* "I started by analyzing the dataset, verifying the preprocessing steps, and reviewing the model
+- _Task:_ "My goal was to identify the root cause of the problem and improve the model's accuracy."
+- _Action:_ "I started by analyzing the dataset, verifying the preprocessing steps, and reviewing the model
   architecture. I discovered that the dataset was imbalanced, causing the model to be biased towards the majority class.
   I implemented a combination of under-sampling, over-sampling, and adjusting class weights to address the issue."
-- *Result:* "After applying these changes, the model's accuracy significantly improved, and it successfully detected
+- _Result:_ "After applying these changes, the model's accuracy significantly improved, and it successfully detected
   fraud cases with higher precision and recall."
 
 ### d. Time Management
@@ -438,13 +457,13 @@ PyTorch. Key features of TensorRT include:
 **Question:** "How do you prioritize tasks when faced with multiple deadlines?"  
 **Answer:**
 
-- *Situation:* "In my previous job, there were times when I had to manage multiple projects with overlapping deadlines."
-- *Task:* "My objective was to efficiently allocate my time and resources to ensure all projects were completed on
+- _Situation:_ "In my previous job, there were times when I had to manage multiple projects with overlapping deadlines."
+- _Task:_ "My objective was to efficiently allocate my time and resources to ensure all projects were completed on
   schedule."
-- *Action:* "I used a combination of time management techniques, such as creating a prioritized to-do list, breaking
+- _Action:_ "I used a combination of time management techniques, such as creating a prioritized to-do list, breaking
   tasks into smaller milestones, and setting realistic deadlines. I also communicated my workload to my team and manager
   to ensure transparency and to seek help when needed."
-- *Result:* "By effectively prioritizing and managing my time, I was able to complete all projects on schedule while
+- _Result:_ "By effectively prioritizing and managing my time, I was able to complete all projects on schedule while
   maintaining a high level of quality."
 
 ### e. Adaptability
@@ -452,14 +471,14 @@ PyTorch. Key features of TensorRT include:
 **Question:** "Tell me about a time when you had to adapt to a significant change at work."  
 **Answer:**
 
-- *Situation:* "At my previous job, our team had to switch from using TensorFlow to PyTorch for a new project, while
+- _Situation:_ "At my previous job, our team had to switch from using TensorFlow to PyTorch for a new project, while
   still maintaining our existing TensorFlow-based projects."
-- *Task:* "My goal was to quickly adapt to the new framework and ensure a smooth transition for the team."
-- *Action:* "I proactively took online courses and read documentation to familiarize myself with PyTorch. I also
+- _Task:_ "My goal was to quickly adapt to the new framework and ensure a smooth transition for the team."
+- _Action:_ "I proactively took online courses and read documentation to familiarize myself with PyTorch. I also
   participated in code reviews and discussions with colleagues experienced in PyTorch to gain practical insights. To
   facilitate the team's transition, I created a guide highlighting the key differences between the two frameworks and
   conducted training sessions to share my knowledge."
-- *Result:* "As a result, the team was able to adapt to the new framework more quickly and efficiently. We successfully
+- _Result:_ "As a result, the team was able to adapt to the new framework more quickly and efficiently. We successfully
   developed and maintained projects in both TensorFlow and PyTorch, demonstrating our adaptability and ability to
   embrace new technologies."
 
@@ -469,4 +488,3 @@ PyTorch. Key features of TensorRT include:
 - b. NVIDIA's products and services
 - c. NVIDIA's involvement in deep learning and AI research
 - d. Recent news and updates about the company
-

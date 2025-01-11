@@ -10,21 +10,23 @@ profile:
   image_circular: false # crops the image to make it circular
   address: <p>Austin, TX</p>
 
-
-news: true  # includes a list of news items
+news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 ---
 
 ---
+
 ## _I’d love to say there’s something uniquely special about me in my about me, but I’m not a liar._
 
 ### **Personal Tenets:**
+
 - Leveraging diverse experiences to craft innovative solutions
 - Continuously seeking role models and learning from them
 - Challenging complacency in all aspects of life
 
 ### **Passions & Interests:**
+
 - Deep learning and optimization
 - Physics, simulations, and modeling
 - Scaling ideas and identifying weak points
@@ -34,7 +36,6 @@ social: true  # includes social icons at the bottom of the page
 - Ergogenics and human performance optimization
 - Musical exploration: playing guitar and aspiring to play saxophone more
 - Outdoor adventures that demand resilience and determination
-
 
 If you caught me on any one day, I’d most likely be reading [r/FatFire](https://www.reddit.com/r/fatFIRE/), programming machine learning algorithms, running or lifting weights, walking my dog, listening to an off-beat podcast, or finding something niche over which to obsess.
 

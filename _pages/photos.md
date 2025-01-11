@@ -1,13 +1,12 @@
 ---
 layout: page
-title:  photos
+title: photos
 permalink: /photos/
 nav: true
 nav_order: 2
 date: 2022-09-12 21:01:00`
 description: a collection of places I've seen and want to share
 ---
-
 
 <div class="row mt-3">
     <div class="col-md mt-3 mt-md-0">

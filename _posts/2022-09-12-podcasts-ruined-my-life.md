@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  Podcasts Ruined my Life
-date:   2022-09-12 18:40:16
+title: Podcasts Ruined my Life
+date: 2022-09-12 18:40:16
 description: Something about my mind
 categories: ramblings
 ---
+
 <h1>Listening to Lex Fridman, Sam Parr, Andrew Huberman, and Chase Chewning slowly ruined my life. Here’s how I fixed it.</h1>
 
-Optimization, entrepreneurship, emotionalism, connectedness, and the endless pursuit of excellence: each of these tenants are fundamental to me and probably you too! 
+Optimization, entrepreneurship, emotionalism, connectedness, and the endless pursuit of excellence: each of these tenants are fundamental to me and probably you too!
 
 To stumble upon these guys is a Godsend. The words they and their guests breathe can dramatically shift your perspective on numerous topics and each host does so with their own distinct cadence, sound, and demeanor.
 
@@ -32,22 +33,21 @@ Weeks, months, years pass, and you’re a bit better at whatever activity you’
 Life is great! I mean, how can it not be? You’ve been exposed to philosophy, cutting-edge genomics, hormonal optimization, copywriting, micro dosing psilocybin for and its anxiolytic
 effects, dietary and training approaches for longevity, how to best market to your audience, how to create an audience, the importance of sleep, cryptocurrency and all its promise, flaws, schemes, and scams.
 
--	How to be focused
--	How to start your morning
--	What to eat
--	When to sleep
--	When to wake up 
--	What temperature you should sleep at
--	Which muscles to target
--	Which compound lifts are most potent
--	How long should I be able to dead-hang for
--	How to bulletproof your knees
--	How to bulletproof your coffee
+- How to be focused
+- How to start your morning
+- What to eat
+- When to sleep
+- When to wake up
+- What temperature you should sleep at
+- Which muscles to target
+- Which compound lifts are most potent
+- How long should I be able to dead-hang for
+- How to bulletproof your knees
+- How to bulletproof your coffee
 
 **...**
 
 I think you get it
-
 
 Seemingly, out of nowhere, and yet _slowly_, you began to feel uneasy. Your finely tuned routines and habits were fine. You hadn’t abruptly changed anything. You’d just carefully sewn and injected most of what you’d been learning from your “peers” into your cramped daily routine. Life was good though if you were consuming more high-density information.
 
@@ -77,9 +77,8 @@ Be with yourself. Be with your thoughts. Be someone who thinks deeply without th
 
 Instead of listening to these people day-in and day-out, pause between their words. Let them simmer. Much like any stressor, lifting weights, learning a foreign language, getting better at a new job… it’s tough. It requires bouts of resistance and bouts of recovery. You shouldn’t treat your mind any differently. It needs deep rest. It needs moments of solitude to refine the tremendous stimulus you subject it to.
 
-Give it a try. Let yourself get lost within your own thoughts. Let your mind wonder as you wander. 
+Give it a try. Let yourself get lost within your own thoughts. Let your mind wonder as you wander.
 
 Something that I can guarantee is that you will be astounded by the mental clarification that occurs when you begin to pay attention to the spaces in between words of wisdom. When you let them crystalize and intentionally thread them into your own thought patterns instead of conforming to someone else’s.
 
 # Be you.
-

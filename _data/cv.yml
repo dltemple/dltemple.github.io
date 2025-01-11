@@ -74,8 +74,8 @@
       description:
         - title: Multi-target tracking for Space Situational Awareness
           contents:
-           - Detection, characterization, indication, and warnings
-           - COTS hardware --> data screening --> YOLO Network --> Kalman filter --> multi-target tracking
+            - Detection, characterization, indication, and warnings
+            - COTS hardware --> data screening --> YOLO Network --> Kalman filter --> multi-target tracking
         - title: Hypersonic tracking using RADAR and deep-learning
           contents:
             - Formulated novel Kalman filter parameterized by RNN with Attention lookback mechanism
@@ -125,7 +125,7 @@
   type: nested_list
   contents:
     - title: Applied Machine Learning
-      items: 
+      items:
         - GAN, RNN, Transformer, CNN, Segmentation
         - Bayesian learning methods
         - Graph Neural Networks

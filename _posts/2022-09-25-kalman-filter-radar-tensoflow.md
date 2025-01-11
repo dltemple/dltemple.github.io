@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Radar Target Tracking using Tensorflow
-date:   2022-09-25 01:00:00
+title: Radar Target Tracking using Tensorflow
+date: 2022-09-25 01:00:00
 description: Training a Kalman Filter using Tensorflow P1
 categories: ramblings
 ---
@@ -10,28 +10,31 @@ In many fields of study, state-space-systems are a powerful and tool used to bet
 Kalman, after whom the Kalman Filter is named, derived a steady-state solution for a Gaussian system.
 
 This technique can additionally be applied to dynamic systems with:
+
 - various observation types (RADAR, LIDAR, optical, etc.)
 - underlying state transition models (ballistic, linear, turning, jerking)
 - systems with known control input (rocket with maneuvers, externally applied forces)
 
 One of the incumberances with effectively using a Kalman derived filter is the need to define:
- - state transition matrix
- - observation matrix
- - process gain
- - observation gain
+
+- state transition matrix
+- observation matrix
+- process gain
+- observation gain
 
 These parameters dictate how confident one is in the underlying systems' dynamics as well as the sensors' noise characteristics.
 I.E. how well does our sensor capture the state of the object we are observing?
 
-The Kalman Filter
--
+## The Kalman Filter
+
 The following steps are for the **_prediction_** portion of the filter
 
-$${\begin{align*}
+$$
+{\begin{align*}
 \mathbf{x}_{k+1}^{(P)} &= A \mathbf{x}_k + B {a_k}\\
 P_{k+1}^{(P)} &= A P_k A^T + Q_k^{(r_s)}
-\end{align*}}$$
-
+\end{align*}}
+$$
 
 The current state at time $$k$$, is represented by $$\mathbf{X}_{k}$$
 
@@ -41,34 +44,37 @@ $$\mathbf{x} = [p_i \ p_j \ p_k \ v_i \ v_j \ v_k \ a_i \ a_j \ a_k \ j_i \ j_j 
 
 Additionally, the state-transition matrix, $$\mathbf{F_k}$$ is the following and is described from [THIS PAPER](https://www.researchgate.net/publication/3002819_A_jerk_model_to_tracking_highly_maneuvering_targets)
 
-$$\mathbf{F_k} = \begin{pmatrix}
- 1&  \Delta T &\Delta T^2  &p_1  &0  &0  &0  &0  &0  &0  &0  &0 \\ 
- 0&  1        & \Delta T   &q_1  &0  &0  &0  &0  &0  &0  &0  &0 \\ 
- 0&  0        &  1         &r_1  &0  &0  &0  &0  &0  &0  &0  &0 \\ 
- 0&  0        &  0         &s_1  &0  &0  &0  &0  &0  &0  &0  &0 \\ 
- 0&  0        &  0         &0    &1  &\Delta T  &\Delta T^2  &p_1  &0  &0  &0  &0 \\ 
- 0&  0        &  0         &0    &0  &1  &\Delta T  &q_1  &0  &0  &0  &0 \\ 
- 0&  0        &  0         &0    &0  &0  &1  &r_1  &0  &0  &0  &0 \\ 
- 0&  0        &  0         &0    &0  &0  &0  &s_1  &0  &0  &0  &0 \\ 
- 0&  0        &  0         &0    &0  &0  &0  &0  &1  &\Delta T  &\Delta T^2  &p_1 \\ 
- 0&  0        &  0         &0    &0  &0  &0  &0  &0  &1  &\Delta T  &q_1 \\ 
- 0&  0        &  0         &0    &0  &0  &0  &0  &0  &0  &1  &r_1 \\ 
- 0&  0        &  0         &0    &0  &0  &0  &0  &0  &0  &0  &s_1 
-\end{pmatrix}$$
+$$
+\mathbf{F_k} = \begin{pmatrix}
+ 1&  \Delta T &\Delta T^2  &p_1  &0  &0  &0  &0  &0  &0  &0  &0 \\
+ 0&  1        & \Delta T   &q_1  &0  &0  &0  &0  &0  &0  &0  &0 \\
+ 0&  0        &  1         &r_1  &0  &0  &0  &0  &0  &0  &0  &0 \\
+ 0&  0        &  0         &s_1  &0  &0  &0  &0  &0  &0  &0  &0 \\
+ 0&  0        &  0         &0    &1  &\Delta T  &\Delta T^2  &p_1  &0  &0  &0  &0 \\
+ 0&  0        &  0         &0    &0  &1  &\Delta T  &q_1  &0  &0  &0  &0 \\
+ 0&  0        &  0         &0    &0  &0  &1  &r_1  &0  &0  &0  &0 \\
+ 0&  0        &  0         &0    &0  &0  &0  &s_1  &0  &0  &0  &0 \\
+ 0&  0        &  0         &0    &0  &0  &0  &0  &1  &\Delta T  &\Delta T^2  &p_1 \\
+ 0&  0        &  0         &0    &0  &0  &0  &0  &0  &1  &\Delta T  &q_1 \\
+ 0&  0        &  0         &0    &0  &0  &0  &0  &0  &0  &1  &r_1 \\
+ 0&  0        &  0         &0    &0  &0  &0  &0  &0  &0  &0  &s_1
+\end{pmatrix}
+$$
 
-Let's set up the frame of reference for a 3-Dimensional Position and Velocity Tracker
--
+## Let's set up the frame of reference for a 3-Dimensional Position and Velocity Tracker
 
 ### Our sensor
 
 We're going to be using a radar to track our ballistic object in this example
 
-$$z_{radar} = 
+$$
+z_{radar} =
 \begin{pmatrix}
 \rho  \\
 \theta  \\
 \phi
-\end{pmatrix}$$
+\end{pmatrix}
+$$
 
 $$\rho$$ and $$\theta$$ and $$\phi$$ are the spherical coordinate representatinos of: range, azimuth, and elevation (all relative to the sensor)
 
@@ -78,12 +84,14 @@ Let's let $$\sigma_{\rho} = 1$$ meters and $$\sigma_{\theta} = 0.0015$$ radians 
 
 These terms are the diagonal of our _observation noise covariance_
 
-$$R_t = 
+$$
+R_t =
 \begin{pmatrix}
-\sigma^2 &0  &0 \\ 
-0 &  \theta^2 &0 \\ 
+\sigma^2 &0  &0 \\
+0 &  \theta^2 &0 \\
 0 &  0 & \phi^2
-\end{pmatrix}$$
+\end{pmatrix}
+$$
 
 This is cool, but it introduces a problem to solve.
 
@@ -93,17 +101,19 @@ We've got to address this by converting spherical coordinates to cartesian coord
 
 The basic transformation from spherical to Cartesian is:
 
-$$\begin{bmatrix}
-x\\ 
-y\\ 
+$$
+\begin{bmatrix}
+x\\
+y\\
 z
 \end{bmatrix} =
 
 \begin{bmatrix}
-\rho *cos \phi *cos \theta \\ 
+\rho *cos \phi *cos \theta \\
 \rho *cos \phi * sin \theta \\
 \rho *sin \phi
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 But this introduces predicaments, and those are the measurement uncertainties defined in $$\mathbf{R_t}$$
 
@@ -115,7 +125,6 @@ Our resulting Python code to produce this conversion is below. The latex for thi
 For reference.. R = range, A = azimuth, E = elevation (measurements from radar)
 
 Rt is the observation covariance noise matrix, $$\mathbf{R_t}$$
-
 
         R2 = np.square(R)
         CE = np.cos(E)
@@ -162,6 +171,7 @@ Rt is the observation covariance noise matrix, $$\mathbf{R_t}$$
                     npc([Rxy[:, :, npna], Ryy[:, :, npna], Ryz[:, :, npna]], axis=2),
                     npc([Rxz[:, :, npna], Ryz[:, :, npna], Rzz[:, :, npna]], axis=2)],
                    axis=1)
+
 '''
 
 $$
@@ -172,13 +182,8 @@ $$
 \end{align*}
 $$
 
-
-
-
 For optical tracking, we only have 2 Dimensional observations in aziumth and elevation, but no range information.
 As a result, we are very certain of position in angular space, but have high uncertainty in range.
 
 For RADAR tracking, we have excellent range information and noisy (er) azimuth and elevation measurements based on the sensors' pointing status.
 As a result, we can be very confident in range and range-rate measurements, but are less confident in angular space.
-
-

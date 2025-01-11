@@ -1,57 +1,57 @@
-<link rel="stylesheet" href="/assets/css/double_pendulum_simulation.css">
+<link rel="stylesheet" href="/assets/css/double_pendulum_simulation.css" />
 
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Double Pendulum Simulation</title>
-</head>
-<body>
-   <div id="simulation-and-plots">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Double Pendulum Simulation</title>
+  </head>
+  <body>
+    <div id="simulation-and-plots">
       <div id="double-pendulum-container">
-         <div id="double-pendulum-plot"></div>
-         <div class="buttons">
-            <button id="start-button">Start</button>
-            <button id="stop-button">Stop</button>
-         </div>
-         <div class="params-container">
-                  <div class="param-group">
-                     <label for="m1">Mass 1:</label>
-                     <input type="number" id="m1" step="0.1" value="1">
-                  </div>
-                  <div class="param-group">
-                     <label for="m2">Mass 2:</label>
-                     <input type="number" id="m2" step="0.1" value="1">
-                  </div>
-                  <div class="param-group">
-                     <label for="fade-duration">Fade duration (seconds):</label>
-                     <input type="range" id="fade-duration" name="fade-duration" min="0" max="10" step="0.1" value="1">
-                  </div>
-                  <div class="param-group">
-                     <label for="gravity">Gravity:</label>
-                     <input type="number" id="gravity" value="9.81" step="0.1" min="0">
-                  </div>
-                  <div class="param-group">
-                     <label for="time-step">Time step:</label>
-                     <input type="number" id="time-step" value="0.01" step="0.001" min="0">
-                  </div>
-                  <div class="param-group">
-                     <label for="steps">Steps:</label>
-                     <input type="number" id="steps" value="1000" step="10" min="0">
-                  </div>
-                  <div class="param-group">
-                     <label for="damping">Damping:</label>
-                     <input type="number" id="damping" value="0.0001" step="0.01" min="0" max="1">
-                  </div>
-               </div>
+        <div id="double-pendulum-plot"></div>
+        <div class="buttons">
+          <button id="start-button">Start</button>
+          <button id="stop-button">Stop</button>
+        </div>
+        <div class="params-container">
+          <div class="param-group">
+            <label for="m1">Mass 1:</label>
+            <input type="number" id="m1" step="0.1" value="1" />
+          </div>
+          <div class="param-group">
+            <label for="m2">Mass 2:</label>
+            <input type="number" id="m2" step="0.1" value="1" />
+          </div>
+          <div class="param-group">
+            <label for="fade-duration">Fade duration (seconds):</label>
+            <input type="range" id="fade-duration" name="fade-duration" min="0" max="10" step="0.1" value="1" />
+          </div>
+          <div class="param-group">
+            <label for="gravity">Gravity:</label>
+            <input type="number" id="gravity" value="9.81" step="0.1" min="0" />
+          </div>
+          <div class="param-group">
+            <label for="time-step">Time step:</label>
+            <input type="number" id="time-step" value="0.01" step="0.001" min="0" />
+          </div>
+          <div class="param-group">
+            <label for="steps">Steps:</label>
+            <input type="number" id="steps" value="1000" step="10" min="0" />
+          </div>
+          <div class="param-group">
+            <label for="damping">Damping:</label>
+            <input type="number" id="damping" value="0.0001" step="0.01" min="0" max="1" />
+          </div>
+        </div>
       </div>
       <div id="simulation-container">
-         <div id="state-plot"></div>
-         <div id="deriv-plot"></div>
+        <div id="state-plot"></div>
+        <div id="deriv-plot"></div>
       </div>
-   </div>
-   <script src="{{ '/assets/js/double_pendulum.js' | relative_url }}"></script>
-</body>
+    </div>
+    <script src="{{ '/assets/js/double_pendulum.js' | relative_url }}"></script>
+  </body>
 </html>
 
-<div style="clear:both;"></div>
+<div style="clear: both"></div>

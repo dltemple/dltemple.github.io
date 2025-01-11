@@ -152,4 +152,3 @@ physics to engineering, machine learning, and data science.
 By exploring the double pendulum's motion through interactive simulations, calculating its Lyapunov exponent, applying
 machine learning models for prediction, and analyzing the generated data, we can gain a deeper appreciation for the
 intricacies of classical mechanics and the beauty of chaotic systems.
-

@@ -5,4 +5,3 @@ inline: true
 ---
 
 Check out my MacroFactor review [here!](https://www.dwght.com/thoughts/2022/macro-factor-is-the-best/)
-
